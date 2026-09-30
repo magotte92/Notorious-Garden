@@ -64,7 +64,6 @@ StyleCopReport.xml
 *_p.c
 *_h.h
 *.ilk
-*.meta
 *.obj
 *.iobj
 *.pch
@@ -186,6 +185,9 @@ PublishScripts/
 **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
 !**/[Pp]ackages/build/
+# Unity Package Manager manifest lives in /Packages and must stay tracked.
+!/Packages/manifest.json
+!/Packages/packages-lock.json
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/[Pp]ackages/repositories.config
 # NuGet v3's project.json files produces more ignorable files
@@ -338,3 +340,22 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# Unity generated folders and project files.
+# Script .meta files stay tracked. Smoke projects under ci/ stay tracked.
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/[Aa]ssets/[Ss]ceneDependencyCache*
+sysinfo.txt
+mono_crash.*
+/*.csproj
+/*.sln
+/*.slnx
+*.unityproj

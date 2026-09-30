@@ -4,7 +4,7 @@ namespace Magotte.TooltipUI
 {
     public abstract class Skill : ScriptableObject
     {
-        [SerializeField] private string name;
+        [SerializeField] private new string name;
         [SerializeField] private int EctoplasmCost;
         [SerializeField] private double lethality;
         [SerializeField] private double stealth;
